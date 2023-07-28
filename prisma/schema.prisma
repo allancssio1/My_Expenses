@@ -14,7 +14,7 @@ model Users {
   id         String     @id @default(uuid())
   email      String     @unique
   password   String
-  created_at String
+  created_at String 
   expenses   Expenses[]
 
   @@map("users")
