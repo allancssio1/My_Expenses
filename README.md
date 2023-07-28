@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Test proposed by the company Onfly, where it would be possible to create expenses linked to a user, and each user would have their own data and expenses saved in the database.
 
 ## Installation
 
@@ -61,6 +61,10 @@ $ npm run test:cov
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+## This project creator
+
+- Author - [Allan Freitas](https://www.linkedin.com/in/allan-freitas-201425151/)
 
 ## Stay in touch
 
