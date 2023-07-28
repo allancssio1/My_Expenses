@@ -14,7 +14,7 @@ model Users {
   id         String     @id @default(uuid())
   email      String     @unique
   password   String
-  created_at String 
+  created_at DateTime @default(now()) 
   expenses   Expenses[]
 
   @@map("users")
@@ -23,7 +23,7 @@ model Users {
 model Expenses {
   id         String  @id @default(uuid())
   describe   String //TODO: até 191 caracteries
-  created_at String
+  created_at DateTime @default(now())
   valor      Decimal
   user       Users   @relation(fields: [userId], references: [id])
   userId     String
