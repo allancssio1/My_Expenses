@@ -12,14 +12,16 @@ export class UserService {
     const data = {
       ...createUserDto,
       password: await hash(createUserDto.password, 6),
-      created_at: String(new Date()),
     };
 
-    await this.prisma.users.create({
+    const user = await this.prisma.users.create({
       data,
     });
 
-    return data;
+    return {
+      ...user,
+      password: undefined,
+    };
   }
 
   findAll() {
