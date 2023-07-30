@@ -7,7 +7,13 @@ import { JwtModule } from '@nestjs/jwt';
 import { LocalStrategy } from './strategies/local.strategy';
 
 @Module({
-  imports: [UserModule],
+  imports: [
+    UserModule,
+    JwtModule.register({
+      secret: process.env.JWT_SECRET,
+      signOptions: { expiresIn: '7d' },
+    }),
+  ],
   controllers: [AuthController],
   providers: [AuthService, LocalStrategy],
 })
