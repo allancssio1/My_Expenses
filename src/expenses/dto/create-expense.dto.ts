@@ -1,13 +1,9 @@
 import {
-  IsDate,
   IsDateString,
-  IsDecimal,
-  IsNotEmpty,
   IsNumber,
   IsOptional,
   IsPositive,
   IsString,
-  IsUUID,
   MaxLength,
 } from 'class-validator';
 import { Expense } from '../entities/expense.entity';
@@ -20,10 +16,6 @@ export class CreateExpenseDto extends Expense {
   @IsNumber()
   @IsPositive()
   valor: number;
-
-  @IsString()
-  @IsUUID()
-  userId: string;
 
   @IsOptional()
   @IsDateString()
