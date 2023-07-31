@@ -31,15 +31,7 @@ export class ExpensesService {
     return 'array here';
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return `This action returns a #${id} expense`;
-  }
-
-  update(id: number, updateExpenseDto: UpdateExpenseDto) {
-    return `This action updates a #${id} expense`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} expense`;
   }
 }
